@@ -10,16 +10,6 @@ variables:
 
   # Azure Resource Manager connection created during pipeline creation
   azureSubscription: '3ed233a9-fbe1-42e2-b99f-50a37f902ee1'
-- task: Maven@4
-  inputs:
-    mavenPomFile: 'pom.xml'
-    publishJUnitResults: true
-    testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    javaHomeOption: 'JDKVersion'
-    mavenVersionOption: 'Default'
-    mavenAuthenticateFeed: false
-    effectivePomSkip: false
-    sonarQubeRunAnalysis: false
   
   # Web app name
   webAppName: 'java-spring-boot'
